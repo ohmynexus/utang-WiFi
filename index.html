@@ -6,46 +6,6 @@
 <style>
 :root{--ink:#18212f;--muted:#667085;--line:#e5eaf0;--blue:#225bd6;--pale:#f5f7fb;--green:#16845b;--red:#bd443c}
 *{box-sizing:border-box}body{margin:0;background:var(--pale);color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0;border-radius:11px;padding:11px 14px;font-weight:650;background:var(--blue);color:white}button.secondary{background:#eaf0ff;color:#204eae}button.ghost{background:#f0f2f6;color:#344054}button.danger{background:#fff0ef;color:#a12d27}.wrap{max-width:1000px;margin:auto;padding:22px 16px 60px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:20px}.brand{font-size:23px;font-weight:800;letter-spacing:-.5px}.sub{color:var(--muted);font-size:13px}.actions{display:flex;gap:8px;flex-wrap:wrap}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0 26px}.metric,.panel,.person{background:white;border:1px solid var(--line);border-radius:17px;padding:17px}.metric .k{color:var(--muted);font-size:12px}.metric .v{font-size:clamp(17px,3vw,25px);font-weight:800;margin-top:5px;letter-spacing:-.5px}.metric small{color:var(--muted)}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 12px}.sectionhead h2{font-size:19px;margin:0}.search{max-width:260px;width:100%;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:white}.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.person{padding:17px}.phead{display:flex;justify-content:space-between;align-items:start;gap:10px}.pname{font-weight:800;font-size:18px;overflow-wrap:anywhere}.badge{font-size:11px;font-weight:750;border-radius:99px;padding:5px 9px;white-space:nowrap;background:#e6f7ef;color:var(--green)}.badge.owed{background:#fff1df;color:#a45a0b}.numbers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:16px 0}.numlabel{font-size:11px;color:var(--muted)}.numval{font-weight:750;font-size:14px;overflow-wrap:anywhere}.pactions{display:flex;flex-wrap:wrap;gap:7px}.pactions button{font-size:12px;padding:9px 11px}.history{border-top:1px solid var(--line);margin-top:15px;padding-top:12px}.tx{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eff1f5}.tx:last-child{border-bottom:0}.txname{font-weight:700;font-size:13px}.txmeta{color:var(--muted);font-size:12px}.txamt{font-weight:750;font-size:13px;white-space:nowrap}.empty{padding:35px 14px;text-align:center;color:var(--muted);background:white;border:1px dashed #d8dee8;border-radius:15px;grid-column:1/-1}.foot{margin-top:20px;color:var(--muted);font-size:12px}.modalback{position:fixed;inset:0;background:#11182780;display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.modalback.open{display:flex}.modal{width:min(490px,100%);background:white;border-radius:20px;padding:22px;max-height:92vh;overflow:auto;box-shadow:0 20px 60px #0003}.modal h2{margin:0 0 4px;font-size:20px}.modal .desc{color:var(--muted);font-size:13px;margin-bottom:18px}.field{margin:13px 0}.field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}.field input,.field textarea{width:100%;border:1px solid #d9e0ea;border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink)}textarea{min-height:76px;resize:vertical}.preview{font-size:13px;color:var(--muted);margin-top:6px}.preview strong{color:var(--blue)}.modalbuttons{display:flex;gap:8px;margin-top:18px}.modalbuttons button{flex:1}.notice{padding:10px 12px;background:#fff5e8;color:#8b4b00;border-radius:10px;font-size:12px;margin-top:12px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#172033;color:white;padding:11px 17px;border-radius:12px;box-shadow:0 8px 30px #0002;display:none;z-index:9;font-size:13px;max-width:90vw}.toast.show{display:block}.tools{display:flex;gap:8px;flex-wrap:wrap}.smallnote{font-size:12px;color:var(--muted)}@media(max-width:680px){.metrics{grid-template-columns:repeat(2,1fr);gap:9px}.people{grid-template-columns:1fr}.wrap{padding:16px 12px 40px}.metric{padding:14px}.sectionhead{align-items:flex-start;flex-wrap:wrap}.search{max-width:none}.brand{font-size:21px}}@media print{.actions,.pactions,.sectionhead .search,button{display:none!important}body{background:white}.person,.metric{break-inside:avoid}}
-
-/* NEON DARK GREEN THEME */
-:root{color-scheme:dark;--ink:#e6fff2;--muted:#89a99b;--line:#1b3b30;--blue:#39f59b;--pale:#07110e;--green:#4dffad;--red:#ff727e}
-body{background:radial-gradient(ellipse at 50% -15%,#123e2a 0%,#081610 42%,#050a08 100%);color:var(--ink)}
-.wrap{max-width:1080px;padding-top:28px}
-.brand{color:#e8fff3;letter-spacing:-.8px;text-shadow:0 0 24px #3bff9b30}
-.brand:first-letter{color:#42ff9e}
-.sub,.metric .k,.metric small,.numlabel,.txmeta,.smallnote,.foot{color:#8ca99c}
-button{background:linear-gradient(135deg,#4bffad,#13c878);color:#04140c;box-shadow:0 0 18px #24ee8830;transition:transform .16s,filter .16s}
-button:hover{filter:brightness(1.08);transform:translateY(-1px)}
-button.secondary{background:#123526;color:#8dffc2;border:1px solid #246443;box-shadow:none}
-button.ghost{background:#101e18;color:#c3d8cc;border:1px solid #233b30;box-shadow:none}
-button.danger{background:#32171b;color:#ff9aa2;border:1px solid #623038;box-shadow:none}
-.metric,.panel,.person{background:linear-gradient(145deg,#102019,#0b1510);border:1px solid #234435;box-shadow:0 10px 30px #00000025}
-.metric{position:relative;overflow:hidden}
-.metric:after{content:"";position:absolute;inset:auto -22px -35px auto;width:95px;height:95px;border-radius:50%;background:#37ff9a0b;filter:blur(4px)}
-.metric .v{color:#e5fff0}
-.person{border-radius:19px;transition:border-color .18s,transform .18s}
-.person:hover{border-color:#3d9b6b;transform:translateY(-2px)}
-.pname{color:#edfff5}
-.badge{background:#123b29;color:#75ffc0;border:1px solid #246a48}
-.badge.owed{background:#382a14;color:#ffd28a;border:1px solid #61451d}
-.search{background:#0b1711;border-color:#254333;color:#e6fff2}
-.search::placeholder{color:#668575}
-.search:focus,.field input:focus,.field textarea:focus{outline:2px solid #38f49a55;border-color:#40ed99}
-.empty{background:#0b1711;border-color:#274535;color:#87a698}
-.history{border-color:#244032}
-.tx{border-color:#1a3327}
-.modalback{background:#020805cc;backdrop-filter:blur(7px)}
-.modal{background:linear-gradient(150deg,#11241a,#09120d);border:1px solid #2c5b41;box-shadow:0 24px 80px #0009}
-.modal .desc{color:#8eac9c}
-.field label{color:#cde9d8}
-.field input,.field textarea{background:#08130d;color:#e6fff2;border-color:#294636}
-.preview strong{color:#50ffab}
-.notice{background:#302614;color:#ffd28a;border:1px solid #57421d}
-.toast{background:#c7ffe2;color:#062013;box-shadow:0 8px 35px #0007}
-.divider{border-color:#254333}
-@media(max-width:680px){.wrap{padding:16px 12px 38px}.metric{border-radius:16px}.actions{gap:7px}.actions button{padding:10px 12px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
-
 </style></head>
 <body><main class="wrap">
 <header class="top"><div><div class="brand">◈ Buku Utang WiFi</div><div class="sub">Pencatatan tagihan, pembayaran, dan piutang pelanggan</div></div><div class="actions"><button id="addBtn">+ Pelanggan</button><button class="secondary" id="recapBtn">Salin rekap</button><button class="ghost" id="csvBtn">Ekspor CSV</button><button class="ghost" id="backupBtn">Backup</button><button class="ghost" id="restoreBtn">Restore</button><input id="restoreFile" type="file" accept="application/json" hidden></div></header>
