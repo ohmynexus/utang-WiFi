@@ -52,15 +52,117 @@ button.danger{background:#32171b;color:#ff9aa2;border:1px solid #623038;box-shad
 @media(max-width:680px){.wrap{padding:16px 12px 38px}.metric{border-radius:16px}.actions{gap:7px}.actions button{padding:10px 12px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
 
+
+/* Refined readable premium dark interface */
+:root{--ink:#e9fff3;--muted:#9ab5a6;--line:#284637;--blue:#42f5a1;--pale:#07100c;--green:#56ffb0;--red:#ff8593}
+body{background:radial-gradient(ellipse at 8% -12%,#16442e 0%,#091710 34%,#050a07 78%);color:#e9fff3}
+.wrap{max-width:1050px;padding-top:24px}
+.brand{font-size:clamp(22px,3vw,29px);color:#effff5;text-shadow:0 0 20px #39e98c20}
+.metric,.panel,.person{background:linear-gradient(145deg,#10231a,#0b1711);border:1px solid #294b38;box-shadow:0 12px 32px #0003}
+.metric{border-radius:21px;padding:20px}
+.metric .k{color:#a1baab;font-size:13px}.metric .v{color:#f0fff5;font-size:clamp(19px,3vw,27px)}
+.sectionhead h2{color:#eafff1;font-size:21px}
+.person{padding:20px;border-radius:23px}
+.person:hover{border-color:#4a9e71}
+.pname{font-size:21px;letter-spacing:-.3px;color:#f1fff6}
+.numbers{gap:10px;margin:18px 0}
+.numlabel{color:#9ab4a5;font-size:12px}.numval{font-size:15px;color:#edfff4}
+.badge{font-size:12px;padding:6px 11px}
+.pactions{gap:8px}
+.pactions button{font-size:13px;padding:10px 13px;border-radius:13px}
+button{border-radius:14px;font-weight:700}
+button:disabled{opacity:.38;box-shadow:none}
+button.secondary{background:#153c2a;color:#a1ffd0;border:1px solid #2b6748}
+button.ghost{background:#101f17;color:#c9ded1;border:1px solid #294537}
+button.danger{background:#321a20;color:#ffadb5;border:1px solid #61333d}
+.search{max-width:100%;border-radius:15px;padding:14px 16px;background:#0a1710;border:1px solid #2b4b38;color:#effff4;font-size:15px}
+.search::placeholder{color:#799786}
+.note-peek{margin:15px 0 16px;padding:12px 14px;border-radius:15px;background:linear-gradient(120deg,#0c281a,#0c1b13);border:1px solid #25563a}
+.note-head{font-size:10px;font-weight:800;letter-spacing:1px;color:#65e9a2;display:flex;align-items:center;gap:7px;margin-bottom:8px}
+.note-mark{display:inline-flex;align-items:center;justify-content:center;background:#17452d;border-radius:7px;width:22px;height:22px;font-size:14px}
+.note-line{display:grid;gap:3px;padding:7px 0;border-top:1px solid #1b3b29}
+.note-date{font-size:10px;font-weight:700;color:#8eaf9b}
+
+.note-meta{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.note-amount{font-size:12px;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.note-amount.is-debt{color:#6dffb0}
+.note-amount.is-payment{color:#7fd4ff}
+.note-copy{font-size:13px;line-height:1.5;color:#e0f6e8;overflow-wrap:anywhere;white-space:pre-wrap}
+.note-more{font-size:11px;color:#6fdda0;padding-top:7px}
+.history{border-top:1px solid #284637}
+.tx{border-color:#1b3426;padding:12px 0}
+.txmeta{color:#91ad9c;line-height:1.5}
+.txname{color:#d9f3e3}
+.modal{background:linear-gradient(145deg,#11241a,#08120c);border:1px solid #315a41;border-radius:23px}
+.field input,.field textarea{border-radius:13px;background:#08140d;border:1px solid #31503d;color:#eafff1;padding:13px}
+.field textarea{min-height:104px}
+.field label{color:#d5eddf}
+.modalbuttons button{padding:13px}
+@media(max-width:680px){
+ .wrap{padding:16px 12px 38px}
+ .metric{padding:15px;border-radius:18px}
+ .person{padding:16px;border-radius:20px}
+ .numbers{gap:6px}
+ .numval{font-size:14px}
+ .pactions button{font-size:12px;padding:10px 11px}
+ .note-peek{padding:11px 12px}
+}
+
+
+/* Compact header, financial charts, and floating add-customer action */
+:root{--ink:#eafff2;--muted:#a2bcae;--line:#2b4a39}
+body{color:#eafff2}
+.brand,.sectionhead h2,.chart-card h2,.pname{color:#effff5}
+.sub,.metric .k,.metric small,.numlabel,.txmeta,.smallnote,.foot,.chart-sub{color:#a0b9aa}
+.metric .v,.numval,.txname,.txamt,.chart-total{color:#f0fff5}
+.search,.field input,.field textarea{color:#eafff2}
+.search::placeholder{color:#86a493}
+button.ghost{color:#d1e4d8}
+button.secondary{color:#a8ffd1}
+button.danger{color:#ffb4bc}
+.chart-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:0 0 28px}
+.chart-card{min-width:0;padding:19px;border:1px solid #294b38;border-radius:22px;background:linear-gradient(145deg,#10231a,#0a160f);box-shadow:0 12px 30px #0002}
+.chart-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.chart-kicker{font-size:10px;letter-spacing:1.05px;font-weight:800;color:#80a891}
+.chart-card h2{font-size:18px;margin:3px 0 0;letter-spacing:-.3px}
+.chart-dot{width:10px;height:10px;border-radius:50%;box-shadow:0 0 15px currentColor}
+.income-dot{background:#51ffab;color:#51ffab}.debt-dot{background:#80d9ff;color:#80d9ff}
+.chart-total{font-size:clamp(22px,4vw,30px);font-weight:850;letter-spacing:-.7px;margin-top:14px;font-variant-numeric:tabular-nums}
+.chart-sub{font-size:11px;margin-top:2px}
+.bars{margin-top:19px;min-height:120px}
+.bars:has(.bar-item){display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:7px;align-items:end}
+.bar-item{display:flex;flex-direction:column;align-items:stretch;justify-content:end;min-width:0;text-align:center;gap:5px}
+.bar-value{font-size:9px;color:#a7c3b3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-height:13px}
+.bar-track{height:78px;display:flex;align-items:end;overflow:hidden;border-radius:8px 8px 3px 3px;background:#152a1e}
+.bar-fill{width:100%;border-radius:7px 7px 2px 2px;transition:height .25s ease}
+.income-fill{background:linear-gradient(0deg,#16b86d,#62ffb0);box-shadow:0 0 14px #3bfa9924}
+.bar-label{font-size:10px;color:#a6c0b1}
+.debt-row{margin:12px 0}
+.debt-row-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
+.debt-name{font-size:12px;color:#d9f3e3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:48%}
+.debt-row-head b{font-size:12px;color:#bdeaff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.debt-track{height:9px;border-radius:99px;background:#172c21;overflow:hidden}
+.debt-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,#329ce0,#86e1ff);box-shadow:0 0 13px #55c9ff25}
+.chart-empty{font-size:12px;color:#9cb6a6;padding:18px 0}
+.floating-add{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:calc(22px + env(safe-area-inset-bottom));z-index:4;width:62px;height:62px;border-radius:50%;padding:0;display:flex;align-items:center;justify-content:center;font-size:38px;font-weight:500;line-height:1;color:#052313;background:linear-gradient(145deg,#67ffb8,#19ce7a);border:1px solid #8affc8;box-shadow:0 7px 28px #30ff9b45,0 0 0 5px #35e88b13}
+.floating-add:active{transform:scale(.96)}
+.wrap{padding-bottom:105px}
+@media(max-width:680px){.chart-grid{grid-template-columns:1fr;gap:10px;margin-bottom:24px}.chart-card{padding:16px;border-radius:19px}.bars:has(.bar-item){gap:5px}.bar-value{font-size:8px}.bar-track{height:74px}.floating-add{width:60px;height:60px;right:18px;bottom:calc(20px + env(safe-area-inset-bottom))}}
+@media print{.chart-grid,.floating-add{display:none!important}}
+
 </style></head>
 <body><main class="wrap">
-<header class="top"><div><div class="brand">◈ Buku Utang WiFi</div><div class="sub">Pencatatan tagihan, pembayaran, dan piutang pelanggan</div></div><div class="actions"><button id="addBtn">+ Pelanggan</button><button class="secondary" id="recapBtn">Salin rekap</button><button class="ghost" id="csvBtn">Ekspor CSV</button><button class="ghost" id="backupBtn">Backup</button><button class="ghost" id="restoreBtn">Restore</button><input id="restoreFile" type="file" accept="application/json" hidden></div></header>
+<header class="top"><div><div class="brand">◈ Buku Utang WiFi</div><div class="sub">Pencatatan tagihan, pembayaran, dan piutang pelanggan</div></div><div class="actions"><button class="secondary" id="recapBtn">Salin rekap</button><button class="ghost" id="csvBtn">Ekspor CSV</button><button class="ghost" id="backupBtn">Backup</button><button class="ghost" id="restoreBtn">Restore</button><input id="restoreFile" type="file" accept="application/json" hidden></div></header>
 <section class="metrics"><div class="metric"><div class="k">Total tagihan</div><div class="v" id="mBilled">Rp0</div><small>Akumulasi utang dicatat</small></div><div class="metric"><div class="k">Total pendapatan</div><div class="v" id="mPaid">Rp0</div><small>Pembayaran diterima</small></div><div class="metric"><div class="k">Sisa piutang</div><div class="v" id="mRemain">Rp0</div><small>Tagihan dikurangi pembayaran</small></div><div class="metric"><div class="k">Pelanggan</div><div class="v" id="mCount">0</div><small>Terdaftar</small></div></section>
+<section class="chart-grid" aria-label="Grafik keuangan">
+ <article class="chart-card"><div class="chart-heading"><div><div class="chart-kicker">ARUS PEMBAYARAN</div><h2>Pendapatan</h2></div><span class="chart-dot income-dot"></span></div><div class="chart-total" id="chartIncomeTotal">Rp0</div><div class="chart-sub">Pembayaran diterima · 6 bulan terakhir</div><div id="incomeChart" class="bars" aria-label="Grafik pendapatan bulanan"></div></article>
+ <article class="chart-card"><div class="chart-heading"><div><div class="chart-kicker">TAGIHAN BELUM DIBAYAR</div><h2>Total piutang</h2></div><span class="chart-dot debt-dot"></span></div><div class="chart-total" id="chartDebtTotal">Rp0</div><div class="chart-sub">Sisa seluruh pelanggan</div><div id="debtChart" class="bars" aria-label="Grafik piutang per pelanggan"></div></article>
+</section>
 <div class="sectionhead"><h2>Daftar pelanggan</h2><input class="search" id="search" placeholder="Cari nama pelanggan…"></div>
 <div class="people" id="people"></div>
 <div class="foot">Data tersimpan di penyimpanan browser perangkat ini. Ekspor backup secara berkala. Data tidak otomatis tersinkron ke perangkat lain.</div>
 </main>
-<div class="modalback" id="modalback"><section class="modal" role="dialog" aria-modal="true"><h2 id="modalTitle"></h2><div class="desc" id="modalDesc"></div><form id="modalForm"></form></section></div><div class="toast" id="toast"></div>
+<div class="modalback" id="modalback"><section class="modal" role="dialog" aria-modal="true"><h2 id="modalTitle"></h2><div class="desc" id="modalDesc"></div><form id="modalForm"></form></section></div><div class="toast" id="toast"></div><button id="floatingAdd" class="floating-add" aria-label="Tambah pelanggan" title="Tambah pelanggan">+</button>
 <script>
 (()=>{'use strict';
 
@@ -81,25 +183,7 @@ function total(c){let tx=state.transactions.filter(t=>t.customerId===c.id);let b
 function toast(s){let el=$('toast');el.textContent=s;el.classList.add('show');clearTimeout(window.__toast);window.__toast=setTimeout(()=>el.classList.remove('show'),2600)}
 function txLabel(t){return t.type==='initial'?'Utang awal':t.type==='debt'?'Tambah utang':'Pembayaran'}
 function render(){let billed=0,paid=0;state.customers.forEach(c=>{let t=total(c);billed+=t.billed;paid+=t.paid});$('mBilled').textContent=rupiah(billed);$('mPaid').textContent=rupiah(paid);$('mRemain').textContent=rupiah(billed-paid);$('mCount').textContent=state.customers.length;
-let query=$('search').value.trim().toLocaleLowerCase('id');let customers=[...state.customers].filter(c=>c.name.toLocaleLowerCase('id').includes(query)).sort((a,b)=>a.name.localeCompare(b.name,'id'));
-$('people').innerHTML=customers.length?customers.map(c=>{let t=total(c),open=expanded.has(c.id),hist=state.transactions.filter(x=>x.customerId===c.id).sort((a,b)=>b.date.localeCompare(a.date)||b.createdAt-a.createdAt);return `<article class="person"><div class="phead"><div class="pname">${esc(c.name)}</div><span class="badge ${t.remain?'owed':''}">${t.remain?'Belum lunas':'Lunas'}</span></div><div class="numbers"><div><div class="numlabel">Total utang</div><div class="numval">${rupiah(t.billed)}</div></div><div><div class="numlabel">Pembayaran</div><div class="numval">${rupiah(t.paid)}</div></div><div><div class="numlabel">Sisa utang</div><div class="numval">${rupiah(t.remain)}</div></div></div><div class="pactions"><button onclick="window.wifiAct('debt','${c.id}')">+ Tambah utang</button><button class="secondary" onclick="window.wifiAct('payment','${c.id}')" ${t.remain===0?'disabled':''}>Bayar</button><button class="ghost" onclick="window.wifiAct('history','${c.id}')">${open?'Tutup riwayat':'Riwayat'} (${hist.length})</button><button class="ghost" onclick="window.wifiAct('edit','${c.id}')">Edit nama</button><button class="danger" onclick="window.wifiAct('delete','${c.id}')">Hapus</button></div>${open?`<div class="history">${hist.length?hist.map(x=>`<div class="tx"><div><div class="txname">${esc(txLabel(x))}</div><div class="txmeta">${dateFmt(x.date)}${x.note?' · '+esc(x.note):''}</div></div><div class="txamt" style="color:${x.type==='payment'?'var(--green)':'var(--ink)'}">${x.type==='payment'?'−':'+'}${rupiah(x.amount)}</div></div>`).join(''):'<div class="smallnote">Belum ada transaksi.</div>'}</div>`:''}</article>`}).join(''):'<div class="empty">'+(state.customers.length?'Pelanggan tidak ditemukan.':'Belum ada pelanggan. Tambahkan pelanggan pertama untuk mulai mencatat.')+'</div>'}
-function openModal(kind,id=null){mode=kind;activeId=id;const customer=state.customers.find(c=>c.id===id);$('modalTitle').textContent=kind==='new'?'Tambah pelanggan baru':kind==='debt'?'Tambah utang': 'Catat pembayaran';$('modalDesc').textContent=customer?`Pelanggan: ${customer.name}`:'Isi informasi pelanggan dan utang awal.';let nameField=kind==='new'?`<div class="field"><label>Nama pelanggan *</label><input name="name" required maxlength="120" autocomplete="name" placeholder="Nama lengkap"></div>`:'';let dateLabel=kind==='payment'?'Tanggal pembayaran':'Tanggal utang';$('modalForm').innerHTML=`${nameField}<div class="field"><label>${dateLabel} *</label><input type="date" name="date" value="${today()}" required></div><div class="field"><label>Nominal (dalam ribuan) *</label><input name="amount" id="amountInput" inputmode="numeric" autocomplete="off" pattern="[0-9]+" required placeholder="Contoh: 100"><div class="preview">Nominal transaksi: <strong id="amountPreview">—</strong><br><span class="smallnote">Ketik 100 untuk Rp100.000. Angka input tidak diformat saat mengetik.</span></div></div><div class="field"><label>Catatan</label><textarea name="note" maxlength="500" placeholder="Contoh: WiFi bulan ini"></textarea></div><div id="formError" class="notice" hidden></div><div class="modalbuttons"><button type="button" class="ghost" id="cancel">Batal</button><button type="submit">${kind==='new'?'Simpan pelanggan':kind==='debt'?'Simpan transaksi':'Simpan pembayaran'}</button></div>`;$('modalback').classList.add('open');$('amountInput').addEventListener('input',e=>{let clean=e.target.value.replace(/\D/g,'');if(e.target.value!==clean){let p=e.target.selectionStart;e.target.value=clean;try{e.target.setSelectionRange(p-(e.target.value.length-clean.length),p-(e.target.value.length-clean.length))}catch{}}let val=safeIntDigits(e.target.value);$('amountPreview').textContent=val?rupiah(val):'—';});$('cancel').onclick=closeModal;$('modalForm').onsubmit=submitForm;setTimeout(()=>$((kind==='new'?'name':'amountInput')).focus(),30)}
-function closeModal(){$('modalback').classList.remove('open');mode=null;activeId=null}
-function submitForm(e){e.preventDefault();let f=new FormData(e.target),date=f.get('date'),amount=safeIntDigits(f.get('amount')),note=String(f.get('note')||'').trim();let error=$('formError');const fail=m=>{error.hidden=false;error.textContent=m};error.hidden=true;if(!date||!amount){fail('Nominal wajib berupa angka lebih dari nol dan tidak melebihi batas aman.');return}if(!Number.isSafeInteger(amount)){fail('Nominal terlalu besar.');return}
-if(mode==='new'){let name=String(f.get('name')||'').trim();if(!name){fail('Nama pelanggan wajib diisi.');return}let duplicate=state.customers.find(c=>c.name.trim().toLocaleLowerCase('id')===name.toLocaleLowerCase('id'));if(duplicate){fail(`Nama sudah terdaftar. Gunakan pelanggan "${duplicate.name}" lalu pilih Tambah utang.`);return}let c={id:crypto.randomUUID(),name,createdAt:Date.now()};state.customers.push(c);state.transactions.push({id:crypto.randomUUID(),customerId:c.id,type:'initial',date,amount,note,createdAt:Date.now()})}
-else{let c=state.customers.find(x=>x.id===activeId);if(!c){fail('Data pelanggan tidak ditemukan.');return}if(mode==='payment'){let t=total(c);if(amount>t.remain){fail(`Pembayaran melebihi sisa utang ${rupiah(t.remain)}.`);return}if(amount===0){fail('Pembayaran harus lebih dari nol.');return}}state.transactions.push({id:crypto.randomUUID(),customerId:c.id,type:mode==='debt'?'debt':'payment',date,amount,note,createdAt:Date.now()})}
-if(!persist())return;closeModal();render();toast('Transaksi tersimpan.')}
-window.wifiAct=(a,id)=>{if(a==='history'){expanded.has(id)?expanded.delete(id):expanded.add(id);render();return}
-if(a==='delete'){const c=state.customers.find(x=>x.id===id);if(!c)return;const n=state.transactions.filter(t=>t.customerId===id).length;if(confirm(`Hapus pelanggan “${c.name}” beserta ${n} catatan transaksinya? Tindakan ini tidak dapat dibatalkan.\n\nEkspor backup terlebih dahulu jika ingin menyimpan salinannya.`)){state.customers=state.customers.filter(x=>x.id!==id);state.transactions=state.transactions.filter(t=>t.customerId!==id);expanded.delete(id);if(persist()){render();toast('Pelanggan dan seluruh transaksinya dihapus.')}}return}
-if(a==='edit'){const c=state.customers.find(x=>x.id===id);if(!c)return;const next=prompt('Edit nama pelanggan:',c.name);if(next===null)return;const name=next.trim();if(!name){toast('Nama tidak boleh kosong.');return}const dupe=state.customers.find(x=>x.id!==id&&x.name.trim().toLocaleLowerCase('id')===name.toLocaleLowerCase('id'));if(dupe){toast('Nama tersebut sudah digunakan pelanggan lain.');return}c.name=name;if(persist()){render();toast('Nama pelanggan diperbarui.')}return}
-openModal(a,id)};
-function recap(){let out=['REKAP BUKU UTANG WIFI','Dibuat: '+new Date().toLocaleString('id-ID'),''];let allB=0,allP=0;state.customers.slice().sort((a,b)=>a.name.localeCompare(b.name,'id')).forEach(c=>{let t=total(c);allB+=t.billed;allP+=t.paid;out.push(`${c.name} | Total utang ${rupiah(t.billed)} | Pembayaran ${rupiah(t.paid)} | Sisa ${rupiah(t.remain)}`);state.transactions.filter(x=>x.customerId===c.id).sort((a,b)=>a.date.localeCompare(b.date)||a.createdAt-b.createdAt).forEach(x=>out.push(`  ${dateFmt(x.date)} — ${txLabel(x)} — ${rupiah(x.amount)} — ${x.note||'Tanpa catatan'}`));out.push('')});out.push(`TOTAL TAGIHAN: ${rupiah(allB)}`,`TOTAL PENDAPATAN: ${rupiah(allP)}`,`TOTAL SISA PIUTANG: ${rupiah(allB-allP)}`);return out.join('\n')}
-$('addBtn').onclick=()=>openModal('new');$('search').addEventListener('input',render);
-$('recapBtn').onclick=async()=>{try{await navigator.clipboard.writeText(recap());toast('Rekap disalin.')}catch{download('rekap-buku-utang.txt',recap(),'text/plain;charset=utf-8')}};
-function download(name,data,type){let a=document.createElement('a'),u=URL.createObjectURL(new Blob([data],{type}));a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)}
-$('csvBtn').onclick=()=>{let rows=[['Nama pelanggan','Tanggal','Jenis','Nominal Rupiah','Catatan']];state.transactions.forEach(t=>{let c=state.customers.find(x=>x.id===t.customerId);rows.push([c?.name||'',t.date,txLabel(t),t.amount,t.note||''])});let csv=rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(',')).join('\r\n');download('buku-utang-wifi.csv','\ufeff'+csv,'text/csv;charset=utf-8')};
-$('backupBtn').onclick=()=>download('backup-buku-utang-'+today()+'.json',JSON.stringify({...state,backupCreatedAt:new Date().toISOString(),schemaVersion:1},null,2),'application/json');
-$('restoreBtn').onclick=()=>$('restoreFile').click();$('restoreFile').onchange=async e=>{let file=e.target.files[0];if(!file)return;try{let parsed=JSON.parse(await file.text());if(!Array.isArray(parsed.customers)||!Array.isArray(parsed.transactions))throw Error('Format backup tidak sesuai');let custIds=new Set(parsed.customers.map(c=>c.id));if(parsed.transactions.some(t=>!custIds.has(t.customerId)||!Number.isSafeInteger(t.amount)||t.amount<=0||!['initial','debt','payment'].includes(t.type)))throw Error('Isi backup tidak valid');if(!confirm('Pulihkan backup? Data lokal saat ini akan diganti. Ekspor backup saat ini jika masih diperlukan.'))return;state={customers:parsed.customers,transactions:parsed.transactions};persist();expanded.clear();render();toast('Backup berhasil dipulihkan.')}catch(err){alert('Restore gagal: '+err.message)}finally{e.target.value=''}};
-load();render();
-})();
-</script></body></html>
+// Financial visualizations: received payments by month, outstanding balance by customer.
+const monthNames=['Jan','Feb','Mar','Apr','Mei','Jun','Jul','Agu','Sep','Okt','Nov','Des'];
+const now=new Date(), months=[];
+for(let k=5;k>=0;k--){const d=new Date(now.getFullYear(),now.getMonth()-k,1);months.push({key:d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0'),label:monthNames[d.getMonth()
